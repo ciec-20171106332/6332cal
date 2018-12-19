@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var sa: UITextField!
     
     @IBAction func qingchu(_ sender: Any) {
+        sa.text=""
+        a=0
     }
     @IBAction func dian(_ sender: Any) {
         
@@ -61,21 +63,24 @@ class ViewController: UIViewController {
         
     }
     @IBAction func jian(_ sender: Any) {
-        a=1
+        a=2
         b=Double(sa.text!)!
         sa.text=""
     }
     @IBAction func jia(_ sender: Any) {
-        a=2
+        a=1
         b=Double(sa.text!)!
+        sa.text=""
     }
     @IBAction func chu(_ sender: Any) {
         a=3
         b=Double(sa.text!)!
+        sa.text=""
     }
     @IBAction func cheng(_ sender: Any) {
         a=4
         b=Double(sa.text!)!
+        sa.text=""
     }
     @IBAction func dengyu(_ sender: Any) {
         if a==1 {
@@ -84,12 +89,15 @@ class ViewController: UIViewController {
         }
         if a==2 {
             b=b-Double(sa.text!)!
+            sa.text="\(b)"
         }
         if a==3 {
             b=b*Double(sa.text!)!
+            sa.text="\(b)"
         }
         if a==4 {
             b=b/Double(sa.text!)!
+            sa.text="\(b)"
         }
     }
     override func viewDidLoad() {
