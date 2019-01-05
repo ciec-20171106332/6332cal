@@ -10,11 +10,14 @@ import UIKit
 class ViewController: UIViewController {
     var a=0
     var b=0.0
+    var n=0
     @IBOutlet weak var sa: UITextField!
     
     @IBAction func qingchu(_ sender: Any) {
         sa.text=""
         a=0
+        n=0
+        b=0.0
     }
     @IBAction func dian(_ sender: Any) {
         
@@ -22,7 +25,8 @@ class ViewController: UIViewController {
     }
     @IBAction func ling(_ sender: Any) {
         
-         sa.text=sa.text!+"0"
+            sa.text=sa.text!+"0"
+        
     }
     @IBAction func jiu(_ sender: Any) {
         
@@ -64,22 +68,47 @@ class ViewController: UIViewController {
     }
     @IBAction func jian(_ sender: Any) {
         a=2
-        b=Double(sa.text!)!
+        if n==0{
+            b=Double(sa.text!)!
+            n=n+1
+        }
+        else{
+            b=b-Double(sa.text!)!
+        }
         sa.text=""
     }
     @IBAction func jia(_ sender: Any) {
         a=1
-        b=Double(sa.text!)!
+        if n==0{
+            b=Double(sa.text!)!
+            n=n+1
+        }
+        else{
+            b=b+Double(sa.text!)!
+        }
         sa.text=""
     }
     @IBAction func chu(_ sender: Any) {
-        a=3
-        b=Double(sa.text!)!
+        a=4
+        if n==0{
+            b=Double(sa.text!)!
+            n=n+1
+        }
+        else{
+            b=b/Double(sa.text!)!
+        }
         sa.text=""
     }
     @IBAction func cheng(_ sender: Any) {
-        a=4
-        b=Double(sa.text!)!
+        a=3
+        
+        if n==0{
+            b=Double(sa.text!)!
+            n=n+1
+        }
+        else{
+            b=b*Double(sa.text!)!
+        }
         sa.text=""
     }
     @IBAction func dengyu(_ sender: Any) {
